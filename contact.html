@@ -78,15 +78,18 @@
   <form role="form" method="post" action="index.php">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
+      <input type="name" class="form-control" id="name" name="name" value="<?php echo htmlspecialchars($_POST['name']); ?>" placeholder="Enter name">
+      <?php echo "<p class='text-danger'>$errName</p>";?>
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" >
+      <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>" placeholder="Enter email" >
+    	<?php echo "<p class='text-danger'>$errEmail</p>";?>
     </div>
     <div class="form-group">
       <label for="msg">Message:</label>
-      <input type="msg" class="form-control" id="msg" name="msg" placeholder="Enter message" >
+      <input type="msg" class="form-control" id="msg" name="msg" value="<?php echo htmlspecialchars($_POST['msg']); ?>" placeholder="Enter message" >
+    	 <?php echo "<p class='text-danger'>$errMessage</p>";?>
     </div>
     <button type="submit" id="submit" name="name" class="btn btn-default">Submit</button>
   </form>
