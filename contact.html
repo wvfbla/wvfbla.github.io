@@ -78,15 +78,15 @@
   <form role="form" method="post" action="index.php">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="name" class="form-control" id="name" name="name" placeholder="Enter name">
+      <input type="name" class="form-control" id="name" name="name" placeholder="Enter name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
     </div>
     <div class="form-group">
       <label for="msg">Message:</label>
-      <input type="msg" class="form-control" id="msg" name="message" placeholder="Enter message">
+      <input type="msg" class="form-control" id="msg" name="msg" placeholder="Enter message" value="<?php echo htmlspecialchars($_POST['msg']); ?>">
     </div>
     <button type="submit" id="submit" name="name" class="btn btn-default">Submit</button>
   </form>
